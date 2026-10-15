@@ -1,0 +1,39 @@
+prefer-no-csd
+screenshot-path null
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland;xcb"
+    DISABLE_QT5_COMPAT "1"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    
+    // Cursor & Icon Environment Overrides
+    XCURSOR_THEME "Neuro-sama"
+    XCURSOR_SIZE "32"
+    // HYPRCURSOR_THEME "Nordzy-cursors-white"
+    // HYPRCURSOR_SIZE "24"
+}
+
+cursor {
+  xcursor-theme "Neuro-sama"
+  xcursor-size 32
+}
+
+blur {
+  passes 3        // Perfect balance: high-quality blur with almost no GPU strain
+    offset 3.5      // Spreads the blur radius smoothly without needing 4 passes
+    noise 0.015     // Prevents color banding on dark/Tokyo Night wallpapers
+    saturation 1.25 // Slightly enriches colors passing through glass
+}
+
+debug {
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+}
+
+hotkey-overlay {
+    skip-at-startup
+}

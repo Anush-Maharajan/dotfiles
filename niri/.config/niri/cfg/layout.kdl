@@ -1,0 +1,54 @@
+layout {
+    background-color "transparent"
+    always-center-single-column
+    center-focused-column "on-overflow"
+
+    // Spacing between windows
+    gaps 6
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    // Active focus ring stays on; inactive ring is disabled
+    focus-ring {
+        width 2
+        active-color "#7aa2f7"
+        inactive-color "#00000000" // Fully transparent (disabled)
+    }
+
+    // Keep global border disabled
+    border {
+        off
+    }
+
+    // Drop shadow under windows
+    shadow {
+        on
+        softness 24
+        spread 2
+        offset x=0 y=4
+        color "#00000055"
+    }
+
+    // Edge padding around monitor borders
+    struts {
+        top 0
+        bottom 4
+        left 4
+        right 4
+    }
+}
+
+overview {
+    zoom 0.3
+    backdrop-color "#0d0e15"
+
+    workspace-shadow {
+        off
+    }
+}

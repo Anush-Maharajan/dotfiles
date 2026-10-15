@@ -1,0 +1,140 @@
+// 1. Global Defaults (Applies to all windows)
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+}
+
+// 2. Terminals & Text Editors
+window-rule {
+    match app-id="kitty"
+    draw-border-with-background false
+
+    opacity 0.85
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id=r#"^(org\.wezfurlong\.wezterm|Alacritty|zen|com\.mitchellh\.ghostty)$"#
+    draw-border-with-background false
+}
+
+// 3. File Managers & System Utilities (Thunar Glass Rule)
+window-rule {
+    match app-id=r#"^(thunar|Thunar|org\.xfce\.thunar)$"#
+
+    opacity 0.80
+    draw-border-with-background false
+    background-effect {
+        blur true
+    }
+}
+window-rule {
+    match app-id="^Minecraft.*$"
+    open-on-output "eDP-1"
+}
+
+window-rule {
+    match app-id="steam_app_default"
+    open-on-output "eDP-1"
+}
+
+
+window-rule {
+    match app-id="Spotify"
+    opacity 0.90
+    open-maximized-to-edges true
+    open-on-output "HDMI-A-1"
+}
+
+window-rule {
+    match app-id="com.github.wwmm.easyeffects"
+    open-focused false
+    block-out-from "screen-capture"
+}
+
+// 4. GNOME Apps Styling
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+// 5. Column Width Defaults for System Settings
+window-rule {
+    match app-id=r#"^(gnome-control-center|pavucontrol|nm-connection-editor)$"#
+    default-column-width { proportion 0.5; }
+    open-floating false
+}
+
+// 6. Floating Dialogs & Utilities
+window-rule {
+    match app-id=r#"^(org\.gnome\.Calculator|gnome-calculator|galculator|blueman-manager|xdg-desktop-portal)$"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^firefox$"# title="^Picture-in-Picture$"
+    match app-id="zoom"
+    open-floating true
+}
+
+// 7. Virtualization Apps (Floating)
+window-rule {
+    match app-id=r#"^(virt-manager|qemu.*|VirtualBox.*|remote-viewer)$"#
+    open-floating true
+}
+
+// 8. Display-Specific Pinned Apps (Web Apps & Discord)
+window-rule {
+    match app-id=r#"^(brave-mpamnpolpmhkjogmggmkelhmkhggoghf-Default|brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default|vesktop)$"#
+    open-on-output "HDMI-A-1"
+    open-maximized-to-edges true
+}
+
+
+// 9. Steam Toast Notifications
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// ZEN BROWSER RULES
+// ─────────────────────────────────────────────────────────────────────
+
+// Picture-in-Picture
+window-rule {
+    match app-id="zen" title="Picture-in-Picture"
+    open-floating true
+}
+
+// Dialogs (File pickers / Save As)
+window-rule {
+    match app-id="zen" title="^Opening"
+    match app-id="zen" title="^Save As"
+    open-floating true
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^noctalia.*$"
+    place-within-backdrop true
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+
+    // Set window opacity (0.85 = 85% solid / 15% clear glass)
+    opacity 0.95
+    
+    // Smooth visual integration
+    draw-border-with-background false
+}

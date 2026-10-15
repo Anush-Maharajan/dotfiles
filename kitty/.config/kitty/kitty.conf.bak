@@ -1,0 +1,102 @@
+# ╭──────────────────────────────────────────────────────────────╮
+# │                     KITTY • TOKYO NIGHT                      │
+# ╰──────────────────────────────────────────────────────────────╯
+
+
+# ── FONT ─────────────────────────────────────────────────────────────
+
+font_family          JetBrains Mono Nerd Font Mono
+bold_font            JetBrains Mono Nerd Font Mono Bold
+italic_font          JetBrains Mono Nerd Font Mono
+bold_italic_font     JetBrains Mono Nerd Font Mono Bold
+
+font_size            14.0
+
+
+# ── WINDOW ───────────────────────────────────────────────────────────
+
+window_padding_width  12
+window_padding_height 10
+
+confirm_os_window_close 0
+
+remember_window_size yes
+
+placement_strategy center
+
+hide_window_decorations no
+
+dynamic_background_opacity yes
+background_opacity 0.82
+
+
+# ── CURSOR ───────────────────────────────────────────────────────────
+
+cursor_shape beam
+
+cursor_blink_interval 0.6
+
+cursor_stop_blinking_after 15
+
+cursor_trail 1
+cursor_trail_decay 0.1 0.4
+
+
+# ── SCROLLBACK ───────────────────────────────────────────────────────
+
+scrollback_lines 10000
+
+wheel_scroll_min_lines 3
+
+wheel_scroll_multiplier 3.0
+
+
+# ── TERMINAL ─────────────────────────────────────────────────────────
+
+enable_audio_bell no
+
+visual_bell_duration 0.0
+
+linux_display_server auto
+
+term xterm-kitty
+
+
+# ── SELECTION ────────────────────────────────────────────────────────
+
+select_by_word_characters :@-./_~?&=%+#
+
+copy_on_select no
+
+
+# ── MOUSE ────────────────────────────────────────────────────────────
+
+mouse_hide_wait 3.0
+
+focus_follows_mouse no
+
+
+# ── PERFORMANCE ──────────────────────────────────────────────────────
+
+repaint_delay 10
+
+input_delay 3
+
+sync_to_monitor yes
+
+
+# ── SHELL INTEGRATION ────────────────────────────────────────────────
+
+shell_integration enabled
+
+
+# ── URL HANDLING ─────────────────────────────────────────────────────
+
+url_style curly
+
+open_url_with_default_browser yes
+
+
+# ── KITTY THEME ──────────────────────────────────────────────────────
+
+include current-theme.conf

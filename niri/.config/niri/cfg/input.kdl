@@ -1,0 +1,32 @@
+// ────────────── Input Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+
+input {
+  warp-mouse-to-focus    
+  keyboard {
+    repeat-delay 200  
+    repeat-rate 50 
+    numlock
+
+    xkb {
+      layout "us"
+      options "caps:escape"
+    } 
+  }
+
+  touchpad {
+    tap
+    natural-scroll
+  }
+
+  mouse {
+    accel-speed 0.0
+    accel-profile "flat"
+  }
+}
+
+gestures {
+  hot-corners {
+    off
+  }
+}

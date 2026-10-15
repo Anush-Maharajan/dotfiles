@@ -1,0 +1,7 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+spawn-at-startup "noctalia"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "sh" "-c" "sleep 2 && easyeffects --gapplication-service >/dev/null 2>&1 &"
+spawn-at-startup "sh" "-c" "sleep 3 && noctalia msg notification-dnd-set on"

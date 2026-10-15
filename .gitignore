@@ -1,0 +1,4 @@
+*.zsh_history
+lazy-lock.json
+tmux/.config/tmux/plugins/*
+!tmux/.config/tmux/plugins/.gitkeep
